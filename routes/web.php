@@ -40,3 +40,12 @@ Route::put('/products/{id}', [ProductController::class, 'update'])->name('produc
 
 // Eliminar producto (DELETE)
 Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
+//------- Vue.js Test
+use App\Http\Controllers\VueController;
+
+Route::get('/vue', [VueController::class, 'vue'])->name('vue.test');
+Route::get('/contador', [VueController::class, 'contador'])->name('vue.contador');
+Route::get('/computed', [VueController::class, 'computed'])->name('vue.computed');
+Route::get('/list', [VueController::class, 'list'])->name('vue.list');
+Route::get('/componente', [VueController::class, 'componente'])->name('vue.componente');
